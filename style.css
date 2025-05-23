@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #fefefe;
-  color: #2d2b2b;
+  color: #160202fd;
   animation: fadeIn 1.5s ease-in;
 }
 
@@ -13,7 +13,7 @@ body {
 }
 
 header {
-  background-color: #26192a;
+  background-color: #59c3e3;
   color: #fff;
   text-align: center;
   padding: 2rem 1rem;
@@ -26,7 +26,7 @@ header {
 }
 
 nav {
-  background-color: #484343;
+  background-color: #726e6e;
   text-align: center;
   padding: 1rem 0;
 }
