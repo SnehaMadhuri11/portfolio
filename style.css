@@ -1,0 +1,85 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #2d2b2b;
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  background-color: #26192a;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  animation: slideDown 1s ease-in-out;
+}
+
+@keyframes slideDown {
+  0% { transform: translateY(-50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+nav {
+  background-color: #484343;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+section {
+  padding: 2rem;
+  opacity: 0;
+  animation: fadeInSection 1s forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeInSection {
+  to {
+    opacity: 1;
+  }
+}
+
+h2 {
+  color: #1f1f2e;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.project {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1f1f2e;
+  color: #fff;
+  margin-top: 2rem;
+}
