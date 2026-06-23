@@ -142,7 +142,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-[#0F0A1F]/95 backdrop-blur-md border-b border-slate-200/30 dark:border-purple-900/30 shadow-lg">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <div 
           className="flex items-center gap-3 cursor-pointer"
           onClick={scrollToTop}
@@ -223,7 +223,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white dark:bg-[#0F0A1F] border-b border-slate-200 dark:border-purple-900/30 px-6 py-4 flex flex-col gap-3 shadow-lg"
+            className="md:hidden bg-white dark:bg-[#0F0A1F] border-b border-slate-200 dark:border-purple-900/30 px-6 py-4 flex flex-col gap-3 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
             {navItems.map((item) => (
               <button
@@ -721,7 +721,7 @@ const BackToTop = () => {
 const About = () => {
   return (
     <AnimatedSection className="py-12 md:py-16" id="about">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <SectionHeader 
           icon={User}
           title="About Me"
@@ -743,7 +743,7 @@ const About = () => {
                 I love solving complex problems and creating solutions that make a real impact.
               </p>
               
-              <div className="grid grid-cols-2 gap-3 mt-6 pt-4 dark:border-t border-purple-900/30">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 pt-4 dark:border-t border-purple-900/30">
                 <div className="flex items-center gap-2 dark:text-slate-300 text-slate-700">
                   <CheckCircle className="w-4 h-4 text-[#A855F7]" />
                   <span className="text-sm">Problem Solver</span>
@@ -766,25 +766,25 @@ const About = () => {
 
           {/* Right Column - Quick Stats */}
           <div className="lg:col-span-2">
-            <div className="grid grid-cols-2 gap-4 h-full">
-              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
-                <div className="text-4xl font-bold text-[#A855F7]">10+</div>
-                <div className="text-sm dark:text-slate-400 text-slate-500 mt-1">Technologies</div>
+            <div className="grid grid-cols-2 gap-3 md:gap-4 h-full">
+              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-4 sm:p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
+                <div className="text-3xl sm:text-4xl font-bold text-[#A855F7]">10+</div>
+                <div className="text-xs sm:text-sm dark:text-slate-400 text-slate-500 mt-1">Technologies</div>
                 <Target className="w-5 h-5 text-[#EC4899] mt-2 opacity-60" />
               </div>
-              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
-                <div className="text-4xl font-bold text-[#EC4899]">5+</div>
-                <div className="text-sm dark:text-slate-400 text-slate-500 mt-1">Projects Completed</div>
+              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-4 sm:p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
+                <div className="text-3xl sm:text-4xl font-bold text-[#EC4899]">5+</div>
+                <div className="text-xs sm:text-sm dark:text-slate-400 text-slate-500 mt-1">Projects Completed</div>
                 <FolderGit2 className="w-5 h-5 text-[#EC4899] mt-2 opacity-60" />
               </div>
-              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
-                <div className="text-4xl font-bold text-[#A855F7]">4+</div>
-                <div className="text-sm dark:text-slate-400 text-slate-500 mt-1">Certifications</div>
+              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-4 sm:p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
+                <div className="text-3xl sm:text-4xl font-bold text-[#A855F7]">4+</div>
+                <div className="text-xs sm:text-sm dark:text-slate-400 text-slate-500 mt-1">Certifications</div>
                 <AwardIcon className="w-5 h-5 text-[#A855F7] mt-2 opacity-60" />
               </div>
-              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
-                <div className="text-4xl font-bold text-[#EC4899]">5+</div>
-                <div className="text-sm dark:text-slate-400 text-slate-500 mt-1">Hackathons</div>
+              <div className="dark:bg-[#1A1333] bg-white rounded-2xl p-4 sm:p-5 text-center shadow-lg dark:border border-purple-900/30 hover:dark:border-[#A855F7]/30 hover:border-[#A855F7]/30 transition-all flex flex-col items-center justify-center">
+                <div className="text-3xl sm:text-4xl font-bold text-[#EC4899]">5+</div>
+                <div className="text-xs sm:text-sm dark:text-slate-400 text-slate-500 mt-1">Hackathons</div>
                 <Target className="w-5 h-5 text-[#EC4899] mt-2 opacity-60" />
               </div>
             </div>
@@ -1552,7 +1552,7 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggle(item.id)}
-                className="w-full px-5 py-4 flex items-center justify-between hover:dark:bg-purple-900/30 hover:bg-slate-100 transition-colors"
+                className="w-full px-5 py-4 flex items-center justify-between hover:dark:bg-purple-900/30 hover:bg-slate-100 transition-colors text-left"
               >
                 <span className="font-medium dark:text-[#F8FAFC] text-slate-900 text-base">{item.question}</span>
                 {expandedId === item.id ? (
@@ -1588,7 +1588,7 @@ const QuickAccessPanel = () => {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
-      className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50"
+      className="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 hidden sm:block"
     >
       <div className="dark:bg-[#1A1333] bg-white backdrop-blur-md shadow-lg rounded-full px-5 py-2.5 flex items-center gap-2.5 text-sm dark:border border-purple-800/30">
         <motion.button 
@@ -1722,7 +1722,7 @@ export default function App() {
       <div className="pt-20">
         
         {/* Hero Section */}
-        <header className="pt-16 pb-12 md:pb-16 px-6 relative z-10 dark:border-b border-purple-900/30" id="home">
+        <header className="pt-16 pb-12 md:pb-16 px-4 sm:px-6 relative z-10 dark:border-b border-purple-900/30" id="home">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
             {/* Left Content */}
             <motion.div 
@@ -1795,7 +1795,7 @@ export default function App() {
 
               {/* Quick Stats Matrix */}
               <motion.div 
-                className="flex gap-10 pt-6 dark:border-t border-purple-900/30 max-w-sm"
+                className="flex gap-6 sm:gap-10 pt-6 dark:border-t border-purple-900/30 max-w-sm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.6 }}
@@ -1823,7 +1823,7 @@ export default function App() {
               transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
             >
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#A855F7] to-[#EC4899] opacity-20 blur-lg animate-pulse" />
-              <div className="w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 dark:border-[#1A1333] border-white shadow-2xl ring-4 ring-[#A855F7]/20 relative z-10">
+              <div className="w-60 h-60 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-4 dark:border-[#1A1333] border-white shadow-2xl ring-4 ring-[#A855F7]/20 relative z-10">
                 <img 
                   src="/placeholder-user.jpg" 
                   alt="Snehamadhuri Vakkalagadda" 
@@ -1838,7 +1838,7 @@ export default function App() {
         <About />
 
         {/* Main Content Arena */}
-        <main className="max-w-6xl mx-auto px-6 relative z-10">
+        <main className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
           
           {/* Education & Skills */}
           <AnimatedSection id="skills" className="mb-16 md:mb-24">
@@ -1850,12 +1850,12 @@ export default function App() {
                     <GraduationCap className="w-4 h-4 text-[#A855F7]" />
                     Academic History
                   </h2>
-                  <div className="flex gap-1 mb-4 dark:border-b border-purple-900/30">
+                  <div className="flex gap-1 mb-4 dark:border-b border-purple-900/30 overflow-x-auto no-scrollbar scrollbar-none whitespace-nowrap">
                     {Object.keys(education).map((tab) => (
                       <button
                         key={tab}
                         onClick={() => setActiveEduTab(tab)}
-                        className={`px-3 py-2 text-xs font-bold transition-all border-b-2 -mb-px ${
+                        className={`px-3 py-2 text-xs font-bold transition-all border-b-2 -mb-px whitespace-nowrap flex-shrink-0 cursor-pointer ${
                           activeEduTab === tab 
                             ? 'border-[#A855F7] text-[#A855F7]' 
                             : 'border-transparent dark:text-slate-500 text-slate-400 hover:dark:text-slate-300 hover:text-slate-600'
@@ -2115,10 +2115,10 @@ export default function App() {
         </main>
 
         {/* Footer */}
-        <footer className="max-w-6xl mx-auto px-6 py-10 dark:border-t border-purple-900/30 relative z-10">
+        <footer className="max-w-6xl mx-auto px-4 sm:px-6 py-10 dark:border-t border-purple-900/30 relative z-10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-mono dark:text-slate-500 text-slate-400">
-            <div className="flex items-center gap-2 order-2 sm:order-1">
-              <Heart className="w-3.5 h-3.5 text-red-400/80 fill-red-400/20" />
+            <div className="flex items-center justify-center gap-2 order-2 sm:order-1 text-center">
+              <Heart className="w-3.5 h-3.5 text-red-400/80 fill-red-400/20 flex-shrink-0" />
               <span>© 2026 SNEHAMADHURI VAKKALAGADDA. ALL RIGHTS RESERVED.</span>
             </div>
             <div className="flex items-center gap-6 order-1 sm:order-2">
@@ -2141,7 +2141,7 @@ export default function App() {
         <QuickAccessPanel />
 
         {/* Floating Contact Bar */}
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 dark:bg-[#1A1333] bg-white backdrop-blur-md shadow-lg rounded-full px-6 py-3 flex items-center gap-4 text-sm dark:border border-purple-800/30 z-50 transition-transform hover:scale-[1.01]">
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 dark:bg-[#1A1333] bg-white backdrop-blur-md shadow-lg rounded-full px-4 py-2.5 sm:px-6 sm:py-3 flex items-center gap-3 sm:gap-4 text-xs sm:text-sm dark:border border-purple-800/30 z-50 transition-transform hover:scale-[1.01] w-[max-content] max-w-[calc(100vw-2rem)]">
           <a href={`tel:${contactInfo.phone}`} className="dark:text-slate-400 text-slate-500 hover:text-[#A855F7] transition-colors flex items-center gap-1.5 font-medium">
             <Phone className="w-4 h-4 text-[#A855F7]" />
             <span className="hidden sm:inline">Call</span>
@@ -2154,12 +2154,12 @@ export default function App() {
           <span className="w-px h-4 dark:bg-purple-800/30 bg-slate-200" />
           <a href={contactInfo.linkedin} target="_blank" rel="noreferrer" className="dark:text-slate-400 text-slate-500 hover:text-[#A855F7] transition-colors flex items-center gap-1.5 group font-medium">
             <span className="font-mono font-bold text-[9px] dark:bg-[#0F0A1F] bg-slate-100 dark:border border-purple-800/30 px-1.5 py-0.5 rounded text-[#A855F7] group-hover:bg-[#A855F7] group-hover:text-white transition-colors">IN</span>
-            <span className="hidden sm:inline dark:text-slate-400 text-slate-500 group-hover:text-[#A855F7]">LinkedIn</span> <ExternalLink className="w-2.5 h-2.5 opacity-40" />
+            <span className="hidden sm:inline dark:text-slate-400 text-slate-500 group-hover:text-[#A855F7]">LinkedIn</span> <ExternalLink className="w-2.5 h-2.5 opacity-40 hidden sm:inline-block" />
           </a>
           <span className="w-px h-4 dark:bg-purple-800/30 bg-slate-200 sm:hidden" />
           <a href={contactInfo.github} target="_blank" rel="noreferrer" className="dark:text-slate-400 text-slate-500 hover:text-[#A855F7] transition-colors flex items-center gap-1.5 group font-medium">
             <span className="font-mono font-bold text-[9px] dark:bg-[#0F0A1F] bg-slate-100 dark:border border-purple-800/30 px-1.5 py-0.5 rounded text-[#A855F7] group-hover:bg-[#A855F7] group-hover:text-white transition-colors">GH</span>
-            <span className="hidden sm:inline dark:text-slate-400 text-slate-500 group-hover:text-[#A855F7]">GitHub</span> <ExternalLink className="w-2.5 h-2.5 opacity-40" />
+            <span className="hidden sm:inline dark:text-slate-400 text-slate-500 group-hover:text-[#A855F7]">GitHub</span> <ExternalLink className="w-2.5 h-2.5 opacity-40 hidden sm:inline-block" />
           </a>
         </div>
 
